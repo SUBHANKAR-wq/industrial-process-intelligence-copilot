@@ -11,9 +11,12 @@ SENSOR_COLS = [
     "vibration"
 ]
 
-# Load model ONLY ONCE
-autoencoder = load_model(MODEL_PATH,compile=False,safe_mode=False)
+MODEL_PATH = "models/autoencoder_fixed.h5"
 
+autoencoder = load_model(
+    MODEL_PATH,
+    compile=False
+)
 
 def run_inference(df, X):
 
