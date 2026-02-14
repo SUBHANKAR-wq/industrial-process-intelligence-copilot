@@ -20,8 +20,7 @@ tensorflow-cpu
 langchain-google-genai
 google-generativeai
 joblib
-
-sklearn
+scikit-learn
 # Environment Variable Management
 python-dotenv
 
