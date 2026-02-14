@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 MODEL_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "autoencoder_clean.h5"   # your converted model
+    "autoencoder_new.h5"
 )
 
 # =============================
