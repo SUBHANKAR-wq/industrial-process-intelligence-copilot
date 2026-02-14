@@ -1,26 +1,42 @@
+# numpy
+
+# pandas
+
+
+
+# langchain
+
+# langchain-community
+
+
+# python-dotenv
+
+# tensorflow-cpu==2.20.0
+
+# # Google Gemini (PaLM) Integration
+# langchain-google-genai
+# google-generativeai
+# joblib
+# scikit-learn
+# # Environment Variable Management
+# python-dotenv
+
+
+# # for API
+# fastapi 
+# uvicorn
 numpy
-
 pandas
-
-
-
 langchain
-
 langchain-community
-
-
 python-dotenv
-
-tensorflow-cpu==2.20.0
+tensorflow==2.18.0  # Correct package & version for Python 3.10
 
 # Google Gemini (PaLM) Integration
 langchain-google-genai
 google-generativeai
 joblib
-scikit-learn
-# Environment Variable Management
-python-dotenv
-
+scikit-learn==1.8.0
 
 # for API
 fastapi 
