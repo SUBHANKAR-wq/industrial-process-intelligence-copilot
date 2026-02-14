@@ -1,0 +1,44 @@
+numpy
+
+pandas
+
+scikit-learn
+
+matplotlib
+
+plotly
+
+streamlit
+
+langchain
+
+langchain-community
+
+openai
+
+python-dotenv
+
+torch
+
+tensorflow
+
+# for future upgradation
+kafka-python
+sqlalchemy
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+# Environment Variable Management
+python-dotenv
+streamlit-autorefresh
+
+# for API
+fastapi 
+uvicorn
