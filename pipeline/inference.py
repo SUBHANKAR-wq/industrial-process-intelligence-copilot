@@ -1,8 +1,8 @@
-from tensorflow.keras.models import load_model  # type: ignore
+from tensorflow.keras.models import load_model # type: ignore
 import numpy as np
 import pandas as pd
 
-MODEL_PATH = "models/autoencoder.keras"
+MODEL_PATH = "models/autoencoder_fixed.h5"
 
 SENSOR_COLS = [
     "temperature",
@@ -11,21 +11,26 @@ SENSOR_COLS = [
     "vibration"
 ]
 
-MODEL_PATH = "models/autoencoder_fixed.h5"
+autoencoder = None
 
-autoencoder = load_model(
-    MODEL_PATH,
-    compile=False
-)
+def get_model():
+    global autoencoder
+    if autoencoder is None:
+        autoencoder = load_model(
+            MODEL_PATH,
+            compile=False,
+            safe_mode=False
+        )
+    return autoencoder
+
 
 def run_inference(df, X):
 
-    # X = scaled data
-    X_recon = autoencoder.predict(X, verbose=0)
+    model = get_model()   # ⭐ IMPORTANT
+    X_recon = model.predict(X, verbose=0)
 
     sensor_errors = (X - X_recon) ** 2
 
-    # KEEP ORIGINAL DF (timestamp safe)
     output_df = df.copy()
 
     for i, sensor in enumerate(SENSOR_COLS):
