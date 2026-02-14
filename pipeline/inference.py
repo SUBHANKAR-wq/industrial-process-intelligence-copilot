@@ -12,7 +12,7 @@ SENSOR_COLS = [
 ]
 
 # Load model ONLY ONCE
-autoencoder = load_model(MODEL_PATH,compile=False)
+autoencoder = load_model(MODEL_PATH,compile=False,safe_mode=False)
 
 
 def run_inference(df, X):
