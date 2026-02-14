@@ -19,7 +19,7 @@ tensorflow-cpu
 # Google Gemini (PaLM) Integration
 langchain-google-genai
 google-generativeai
-
+joblib
 
 
 # Environment Variable Management
