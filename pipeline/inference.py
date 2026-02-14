@@ -1,8 +1,16 @@
-from tensorflow.keras.models import load_model # type: ignore
+import os
+from tensorflow.keras.models import load_model
 import numpy as np
 import pandas as pd
 
-MODEL_PATH = "models/autoencoder_fixed.h5"
+# ⭐ absolute path (CLOUD SAFE)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "autoencoder_fixed.h5"
+)
 
 SENSOR_COLS = [
     "temperature",
@@ -12,6 +20,7 @@ SENSOR_COLS = [
 ]
 
 autoencoder = None
+
 
 def get_model():
     global autoencoder
@@ -26,11 +35,10 @@ def get_model():
 
 def run_inference(df, X):
 
-    model = get_model()   # ⭐ IMPORTANT
+    model = get_model()
     X_recon = model.predict(X, verbose=0)
 
     sensor_errors = (X - X_recon) ** 2
-
     output_df = df.copy()
 
     for i, sensor in enumerate(SENSOR_COLS):
