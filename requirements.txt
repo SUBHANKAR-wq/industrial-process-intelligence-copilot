@@ -13,7 +13,6 @@ python-dotenv
 
 tensorflow-cpu==2.20.0
 
-keras==3.8.0
 # Google Gemini (PaLM) Integration
 langchain-google-genai
 google-generativeai
