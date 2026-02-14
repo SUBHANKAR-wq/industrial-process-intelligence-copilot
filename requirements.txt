@@ -21,7 +21,7 @@ python-dotenv
 torch
 
 tensorflow
-
+tensorflow-cpu
 # for future upgradation
 kafka-python
 sqlalchemy
