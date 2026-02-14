@@ -21,7 +21,7 @@ langchain-google-genai
 google-generativeai
 joblib
 
-
+sklearn
 # Environment Variable Management
 python-dotenv
 
