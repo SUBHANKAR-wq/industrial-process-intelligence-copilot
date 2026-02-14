@@ -2,14 +2,15 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 from src.schema.root_cause_schema import RootCauseOutput
-
+import os
 load_dotenv()
 
 def root_cause_agent(sensor_analysis, state):
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
-        temperature=0.3
+        temperature=0.3,
+        google_api_key=os.getenv("GEMINI_API_KEY") #remove when u will run locally add it in .env file and load_dotenv()
     ).with_structured_output(RootCauseOutput)
 
     prompt = PromptTemplate(

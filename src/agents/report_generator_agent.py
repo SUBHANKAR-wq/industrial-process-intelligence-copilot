@@ -2,8 +2,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 from src.schema.report_schema import ReportOutput  # if you use schema
-
-load_dotenv()
+import os
+# load_dotenv() when u will run locally add it
 
 def report_generator_agent(context):
 
@@ -13,7 +13,8 @@ def report_generator_agent(context):
 
     model = ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
-        temperature=0.2
+        temperature=0.2,
+        google_api_key=os.getenv("GEMINI_API_KEY") #remove when u will run locally add it in .env file and load_dotenv()
     )
 
     prompt = PromptTemplate(
