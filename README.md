@@ -69,15 +69,9 @@ Agents are triggered **only during confirmed anomalies**:
 
 ---
 
-### 🔹 Interactive Dashboard
-- Real-time reconstruction error graph
-- Drift & anomaly thresholds
-- Live system state monitoring
-- Agent decision visualization
-
----
 
 ## System Architecture
+
             Sensor Stream (Synthetic + NASA)
                         ↓
                 Data Pipeline Layer
@@ -92,7 +86,3 @@ Agents are triggered **only during confirmed anomalies**:
                     Event Gate
                         ↓
             Agent Orchestration Layer
-                        ↓
-                API Layer (FastAPI)
-                        ↓
-                React Dashboard (UI)
