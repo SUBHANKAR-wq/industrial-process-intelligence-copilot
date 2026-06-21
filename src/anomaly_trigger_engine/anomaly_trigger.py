@@ -31,7 +31,7 @@ thresholds = {
 with open("models/thresholds.json", "w") as f:
     json.dump(thresholds, f, indent=4)
 
-print("✅ Thresholds saved to models/thresholds.json")
+print(" Thresholds saved to models/thresholds.json")
 
 print(f"Normal threshold  : {normal_threshold}")
 print(f"Anomaly threshold : {anomaly_threshold}")
