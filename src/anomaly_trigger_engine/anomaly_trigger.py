@@ -12,7 +12,7 @@ base_line_df = df[df["source"]=="synthetic"]
 mean_error = base_line_df["reconstruction_error"].mean()
 std_error = base_line_df["reconstruction_error"].std()
 
-# Percentile-based thresholds (RECOMMENDED)
+# Percentile-based thresholds 
 
 normal_threshold = np.percentile(
     base_line_df["reconstruction_error"], 95
